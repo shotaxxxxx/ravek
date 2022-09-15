@@ -1,0 +1,50 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  About
+*/
+.p-about {
+  &__text {
+    padding-top: 24px;
+    letter-spacing: normal;
+    line-height: 1.625;
+    text-align: center;
+
+    @include mq(xl) {
+      font-size: 1.125rem;
+    }
+
+    > span {
+      font-weight: 700;
+    }
+  }
+
+  &__subtext {
+    padding-top: 20px;
+    letter-spacing: normal;
+    line-height: 1.625;
+    text-align: center;
+
+    @include mq(xl) {
+      padding-top: 40px;
+      font-size: 1.125rem;
+    }
+  }
+
+  &__button {
+    width: auto;
+    margin-top: 24px;
+    font-size: 1.125rem;
+    text-align: center;
+
+    @include mq(lg) {
+      margin-top: 32px;
+    }
+
+    @include mq(xl) {
+      margin-top: 40px;
+    }
+  }
+}

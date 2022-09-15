@@ -8,4 +8,105 @@
 .p-hero {
   $this: &;
   position: relative;
+  padding: 60px 0;
+  background-color: $background-color;
+
+  @include mq(lg) {
+    padding: 33px 0 32px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(lg) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__inner {
+    display: contents;
+
+    @include mq(lg) {
+      display: block;
+      width: 60%;
+    }
+
+    @include mq(xl) {
+      width: 58%;
+    }
+  }
+
+  &__copy {
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 1.6;
+
+    @include mq(lg) {
+      font-size: 2.5rem;
+    }
+
+    @include mq(xl) {
+      font-size: 3rem;
+    }
+
+    @include mq(xxl) {
+      font-size: 3.75rem;
+    }
+  }
+
+  &__subcopy {
+    margin-top: 15px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1.625;
+
+    @include mq(xl) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__image {
+    width: 305px;
+    margin: 0 auto;
+    margin-top: -30px;
+    text-align: center;
+
+    @include mq(lg) {
+      width: 40%;
+      margin-top: 0;
+    }
+
+    @include mq(xl) {
+      width: 45%;
+    }
+
+    // > img {
+    //   width: 305px;
+    // }
+  }
+
+  &__cta {
+    order: 1;
+    margin-top: -9px;
+
+    @include mq(lg) {
+      margin-top: 30px;
+    }
+  }
+
+  &__button {
+    width: 300px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    text-align: center;
+
+    @include mq(lg) {
+      width: 250px;
+      margin: 0;
+      text-align: left;
+    }
+  }
 }

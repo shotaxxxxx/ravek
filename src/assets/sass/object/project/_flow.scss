@@ -1,0 +1,120 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  Flow
+*/
+.p-flow {
+  background-color: $background-gray;
+
+  &__unit {
+    margin-top: 60px;
+
+    @include mq(sm) {
+      max-width: 70%;
+      margin: 60px auto 0;
+    }
+
+    @include mq(md) {
+      max-width: 50%;
+    }
+
+    @include mq(lg) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      max-width: 900px;
+      margin: 60px auto 0;
+    }
+
+    @include mq(xl) {
+      max-width: 1000px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+
+    @include mq(lg) {
+      width: 240px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 70px;
+        right: -60px;
+        width: 0;
+        height: 0;
+        border-width: 32px 0 32px 29px;
+        border-style: solid;
+        border-color: transparent transparent transparent $arrow-icon-color;
+      }
+    }
+
+    @include mq(xl) {
+      width: 280px;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: 80px;
+
+      @include mq(lg) {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-of-type(3) {
+      margin-top: 90px;
+
+      @include mq(lg) {
+        margin-top: 0;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__body {
+    margin-top: 16px;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 1;
+    text-align: center;
+
+    @include mq(xl) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__text {
+    padding-top: 8px;
+    font-size: 1rem;
+    letter-spacing: normal;
+    line-height: 1.8125;
+  }
+
+  &__label {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    color: $sub-color;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &__image {
+    padding: 21px 0;
+    border-radius: 30px;
+    background-color: $background-color;
+    text-align: center;
+  }
+}

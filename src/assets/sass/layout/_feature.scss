@@ -3,8 +3,8 @@
 @use "../global" as *;
 
 /*
-  Base
+  Feature
 -----------------------------------------------------*/
-a {
-  text-decoration: none;
+.l-feature {
+  background-color: $background-gray;
 }

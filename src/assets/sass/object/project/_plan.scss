@@ -1,0 +1,145 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  Plan
+*/
+.p-plan {
+  &__tableWrapper {
+    margin-top: 40px;
+    overflow: hidden;
+    overflow-x: scroll;
+
+    @include mq(xl) {
+      margin-top: 68px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  &__item {
+    position: relative;
+    padding: 30px 5px;
+    background-color: $primary-text-color;
+    text-align: center;
+    vertical-align: bottom;
+
+    @include mq(xl) {
+      padding: 54px 5px 53px;
+    }
+
+    &.-large {
+      padding: 62px 5px 30px;
+      background-color: $sub-color;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+
+      @include mq(xl) {
+        padding: 70px 5px 53px;
+      }
+    }
+  }
+
+  &__title {
+    color: $base-color;
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    @include mq(xl) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__price {
+    padding-top: 3px;
+    color: $base-color;
+    font-size: 0.875rem;
+    font-weight: 700;
+
+    @include mq(xl) {
+      font-size: 1.125rem;
+    }
+
+    > span {
+      font-size: 1.875rem;
+
+      @include mq(xl) {
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+  &__button {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  &__table {
+    white-space: nowrap;
+
+    @include mq(md) {
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+
+    &-row {
+      position: relative;
+      text-align: center;
+
+      &:nth-of-type(2) {
+        z-index: 2;
+        overflow: hidden;
+      }
+
+      &:nth-child(even) {
+        background-color: $background-color;
+      }
+      &.-bottom {
+        vertical-align: bottom;
+      }
+    }
+
+    &-head {
+      display: inline-block;
+      width: 151px;
+      padding: 10px 0;
+      font-size: 0.9375rem;
+      font-weight: 400;
+      letter-spacing: normal;
+
+      @include mq(xl) {
+        width: 240px;
+        padding: 19px 0;
+        font-size: 1.375rem;
+        line-height: 1;
+      }
+    }
+
+    &-data {
+      width: 180px;
+      font-size: 0.875rem;
+      letter-spacing: normal;
+
+      @include mq(xl) {
+        width: 260px;
+        font-size: 1.125rem;
+      }
+
+      &.-basic {
+        width: 216px;
+        font-size: 1.125rem;
+        font-weight: 700;
+
+        @include mq(xl) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

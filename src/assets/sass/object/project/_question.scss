@@ -1,0 +1,95 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  Question
+*/
+.p-question {
+  background-color: $background-gray;
+
+  &__wrapper {
+    margin-top: 36px;
+  }
+
+  &__container {
+    @include mq(lg) {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    @include mq(xl) {
+      width: 100%;
+      max-width: 920px;
+    }
+  }
+
+  &__item {
+    margin-top: 24px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__header {
+    position: relative;
+    padding: 9px 10px 9px 47px;
+    border-radius: 4px;
+    background-color: $sub-color;
+    color: $base-color;
+    line-height: 1.625;
+
+    @include mq(xl) {
+      padding: 22px 10px 22px 47px;
+      font-size: 1.125rem;
+      line-height: 1;
+    }
+
+    &::before {
+      content: "Q";
+      position: absolute;
+      top: 9px;
+      left: 15px;
+      color: $base-color;
+      font-size: 1.375rem;
+      font-weight: 700;
+      line-height: 1;
+
+      @include mq(xl) {
+        top: 20px;
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+    margin-top: 16px;
+    padding: 11px 16px 11px 40px;
+    border-radius: 4px;
+    background-color: $base-color;
+    line-height: 1.625;
+
+    @include mq(xl) {
+      margin-top: 14px;
+      padding: 22px 16px 22px 40px;
+      font-size: 1.125rem;
+      line-height: 1.7778;
+    }
+
+    &::before {
+      content: "A";
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      color: $primary-text-color;
+      font-size: 1.375rem;
+      font-weight: 700;
+      line-height: 1;
+
+      @include mq(xl) {
+        top: 23px;
+      }
+    }
+  }
+}

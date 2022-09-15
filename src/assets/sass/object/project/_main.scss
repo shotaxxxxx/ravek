@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  Main
+*/
+.p-main {
+  padding-top: 52px;
+
+  @include mq(lg) {
+    padding-top: 72px;
+  }
+}

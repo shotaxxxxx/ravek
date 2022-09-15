@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  cta
+*/
+.p-cta {
+  padding: 40px 0;
+  background-color: $primary-text-color;
+
+  @include mq(xl) {
+    padding: 60px 0;
+  }
+
+  &__body {
+    text-align: center;
+  }
+
+  &__text {
+    color: $base-color;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 1.6111;
+
+    @include mq(xl) {
+      font-size: 2.25rem;
+    }
+  }
+
+  &__button {
+    margin-top: 24px;
+    font-size: 1.125rem;
+    line-height: 1;
+
+    @include mq(xl) {
+      margin-top: 32px;
+    }
+  }
+}

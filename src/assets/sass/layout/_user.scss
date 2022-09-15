@@ -3,8 +3,9 @@
 @use "../global" as *;
 
 /*
-  Base
+  User
 -----------------------------------------------------*/
-a {
-  text-decoration: none;
+.l-user {
+  max-width: 980px;
+  margin: 0 auto;
 }

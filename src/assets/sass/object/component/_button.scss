@@ -7,10 +7,134 @@
 */
 .c-button {
   display: inline-block;
-  border: 0;
   background-color: transparent;
+  box-shadow: 0;
   color: inherit;
   text-decoration: none;
   cursor: pointer;
   appearance: none;
+
+  &.-cta {
+    border-radius: 29px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.24);
+    line-height: 1;
+
+    @include mq(lg) {
+      border-radius: 50px;
+    }
+  }
+
+  &.-bgPurple {
+    background-color: $btn-primary;
+    color: $base-color;
+
+    &.-small {
+      transition: all 0.3s cubic-bezier(0.42, 0, 0.23, 1.1);
+      border: 2px solid $base-color;
+      border-radius: 50px;
+      font-size: 1rem;
+      text-align: center;
+
+      &:hover {
+        border: 2px solid $sub-color;
+        background-color: $base-color;
+        color: $sub-color;
+      }
+
+      @include mq(xl) {
+        font-size: 1.125rem;
+        line-height: 1;
+      }
+    }
+
+    &.-medium {
+      @include mq(lg) {
+        padding: 18px 10px;
+        border-radius: 27px;
+        text-align: center;
+      }
+    }
+  }
+
+  &.-bgWhite {
+    border: 2px solid $sub-color;
+    background-color: $base-color;
+    color: $sub-color;
+
+    &.-small {
+      transition: all 0.3s cubic-bezier(0.42, 0, 0.23, 1.1);
+      border: 2px solid $primary-text-color;
+      border-radius: 50px;
+      color: $primary-text-color;
+      font-size: 1rem;
+      text-align: center;
+
+      &:hover {
+        border: 2px solid $base-color;
+        background-color: $primary-text-color;
+        color: $base-color;
+      }
+
+      @include mq(xl) {
+        font-size: 1.125rem;
+        line-height: 1;
+      }
+    }
+
+    &.-medium {
+      padding: 18px 20px;
+
+      @include mq(lg) {
+        padding: 16px 10px;
+        border-radius: 27px;
+        text-align: center;
+      }
+    }
+  }
+
+  &.-small {
+    width: 166px;
+    padding: 7px 9px;
+
+    @include mq(xl) {
+      width: 234px;
+      padding: 14px;
+    }
+  }
+
+  &.-medium {
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s cubic-bezier(0.42, 0, 0.11, 0.84);
+    font-size: 1.125rem;
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    @include mq(lg) {
+      width: 250px;
+    }
+  }
+
+  &.-large {
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s cubic-bezier(0.42, 0, 0.11, 0.84);
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    @include mq(lg) {
+      width: 400px;
+      padding: 26px 20px;
+    }
+
+    @include mq(xl) {
+      padding: 23px 20px;
+      font-size: 1.5rem;
+    }
+  }
 }

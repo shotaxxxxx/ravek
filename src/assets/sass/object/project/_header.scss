@@ -6,7 +6,20 @@
   Header
 */
 .p-header {
+  background-color: $base-color;
   &__inner {
     display: flex;
+    padding: 14px 0;
+
+    @include mq(lg) {
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 1;
   }
 }

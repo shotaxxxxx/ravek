@@ -7,4 +7,122 @@
 */
 .p-footer {
   position: relative;
+  background-color: $main-color;
+
+  &__inner {
+    padding: 40px 0;
+    @include mq(lg) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      padding: 27px 0;
+    }
+  }
+
+  &__sns {
+    max-width: 150px;
+    margin: 0 auto;
+
+    @include mq(lg) {
+      margin: 0;
+    }
+  }
+
+  &__text {
+    color: $base-color;
+    font-family: $font-en;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+
+    @include mq(lg) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    max-width: 130px;
+    margin: 12px auto 0;
+  }
+
+  &__icon {
+    width: 24px;
+
+    > a {
+      display: block;
+    }
+  }
+
+  &__info {
+    margin-top: 32px;
+    text-align: center;
+
+    @include mq(lg) {
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+
+  &__copyright {
+    margin-top: 28px;
+    color: $base-color;
+    font-size: 0.625rem;
+    line-height: 1;
+
+    @include mq(lg) {
+      margin-top: 5px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    span {
+      display: block;
+      margin-top: 10px;
+
+      @include mq(lg) {
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 14px;
+      }
+    }
+  }
+}
+
+.p-footerNav {
+  margin-top: 7px;
+  @include mq(lg) {
+    display: flex;
+    margin-top: 5px;
+  }
+
+  &__item {
+    position: relative;
+    transition: opacity cubic-bezier(0.39, 0.575, 0.565, 1);
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @include mq(lg) {
+      margin-right: 14px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 7px 0;
+    color: $base-color;
+
+    @include mq(lg) {
+      padding: 14px 0;
+    }
+  }
 }
