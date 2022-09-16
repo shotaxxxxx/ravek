@@ -77,11 +77,16 @@
 
     &:nth-child(6) {
       display: none;
-      transition: transform 0.3s cubic-bezier(0.42, 0, 0.11, 0.84);
+      // transition: transform 0.3s cubic-bezier(0.42, 0, 0.11, 0.84);
+      // transition: all 0.3s cubic-bezier(0.42, 0, 0.11, 0.84);
+      // border-radius: 25px;
 
-      &:hover {
-        transform: translateY(-5px);
-      }
+      // &:hover {
+      //   // transform: translateY(-5px);
+      //   border: 2px solid $sub-color;
+      //   background-color: $base-color;
+      //   color: $sub-color;
+      // }
     }
 
     @include mq(lg) {
@@ -148,12 +153,21 @@
     &.-xsmall {
       @include mq(lg) {
         width: 180px;
-        padding: 12px 23px;
+        padding: 10px 15px;
+        transition: color 0.3s cubic-bezier(0.42, 0, 0.11, 0.84),
+          background-color 0.3s cubic-bezier(0.42, 0, 0.11, 0.84);
+        border: 2px solid $sub-color;
         border-radius: 25px;
         background-color: $sub-color;
         color: $base-color;
         font-size: 1rem;
         font-weight: 700;
+        text-align: center;
+
+        &:hover {
+          background-color: $base-color;
+          color: $sub-color;
+        }
       }
     }
   }
